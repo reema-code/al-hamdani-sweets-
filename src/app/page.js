@@ -1,6 +1,6 @@
-import Logo from '@/components/Logo';
-import ProductCard from '@/components/ProductCard';
-import { products } from '@/data/products';
+import Logo from '../components/Logo';
+import ProductCard from '../components/ProductCard';
+import { products } from '../data/products';
 
 const mapsHref = 'https://www.google.com/maps/search/?api=1&query=%D8%A7%D9%84%D8%AD%D9%85%D8%AF%D8%A7%D9%86%D9%8A+%D9%84%D9%84%D8%AD%D9%84%D9%88%D9%8A%D8%A7%D8%AA+%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8%D9%8A%D8%A9+%D8%AF%D8%A8%D9%8A';
 
