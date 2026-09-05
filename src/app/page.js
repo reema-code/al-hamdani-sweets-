@@ -15,7 +15,6 @@ export default function HomePage() {
       </header>
 
       <section className="hero">
-        <div className="hero-overlay" />
         <div className="shell hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">حلويات مغربية أصيلة في دبي</p>
@@ -26,80 +25,25 @@ export default function HomePage() {
               <a className="btn btn-light" href={mapsHref} target="_blank" rel="noreferrer">موقعنا على الخريطة</a>
             </div>
           </div>
-          <div className="hero-card" aria-label="تشكيلة حلويات مغربية">
-            <div className="arch arch-large"><span>كعب الغزال</span></div>
-            <div className="mini-grid">
-              <div className="arch"><span>الشباكية</span></div>
-              <div className="arch"><span>الفقاص</span></div>
-            </div>
+          <div className="hero-photos" aria-label="حلويات مغربية">
+            <img className="hero-photo hero-photo-main" src="https://images.unsplash.com/photo-1574810134700-b6ba48d151a0?auto=format&fit=crop&w=1200&q=90" alt="حلويات مغربية" />
+            <img className="hero-photo" src="https://images.unsplash.com/photo-1596930807361-8cae0cffb58c?auto=format&fit=crop&w=800&q=85" alt="حلويات تقليدية" />
+            <img className="hero-photo" src="https://images.unsplash.com/photo-1747677541383-094b243f586c?auto=format&fit=crop&w=800&q=85" alt="تشكيلة ضيافة" />
           </div>
         </div>
       </section>
 
-      <section className="trust-strip">
-        <div className="shell trust-grid">
-          {['حلويات مغربية أصيلة','مختارات للضيافة','طلبات المناسبات','متوفر في دبي'].map((item) => <span key={item}>✦ {item}</span>)}
-        </div>
-      </section>
+      <section className="trust-strip"><div className="shell trust-grid">{['حلويات مغربية أصيلة','مختارات للضيافة','طلبات المناسبات','متوفر في دبي'].map((item) => <span key={item}>✦ {item}</span>)}</div></section>
 
-      <section className="section cream">
-        <div className="shell">
-          <div className="section-head">
-            <p className="eyebrow green">من المغرب إلى مائدتكم</p>
-            <h2>حلويات تحمل روح المغرب</h2>
-            <p>وصفات كلاسيكية بطابع أنيق، من اللوز والعسل إلى ماء الزهر والسمسم.</p>
-          </div>
-          <div className="products-grid">
-            {products.map((item, index) => <ProductCard key={item.name} item={item} index={index} />)}
-          </div>
-        </div>
-      </section>
+      <section className="section cream"><div className="shell"><div className="section-head"><p className="eyebrow green">من المغرب إلى مائدتكم</p><h2>حلويات تحمل روح المغرب</h2><p>وصفات كلاسيكية بطابع أنيق، من اللوز والعسل إلى ماء الزهر والسمسم.</p></div><div className="products-grid">{products.map((item) => <ProductCard key={item.name} item={item} />)}</div></div></section>
 
-      <section className="section story">
-        <div className="shell split">
-          <div>
-            <p className="eyebrow gold">حلاوة المغرب كما نعرفها</p>
-            <h2>تفاصيل صغيرة، ضيافة كبيرة.</h2>
-            <p>الحلويات المغربية ليست مجرد حلوى، بل جزء من طقوس الشاي واللمة والاحتفال. صممنا هذه الصفحة لتقود الزائر بسرعة إلى الطلب أو الزيارة.</p>
-            <a className="text-link light" href="#contact">تواصل معنا الآن ←</a>
-          </div>
-          <div className="story-pattern" aria-hidden="true"><span>✦</span><span>✦</span><span>✦</span></div>
-        </div>
-      </section>
+      <section className="section story"><div className="shell split"><div><p className="eyebrow gold">حلاوة المغرب كما نعرفها</p><h2>تفاصيل صغيرة، ضيافة كبيرة.</h2><p>الحلويات المغربية ليست مجرد حلوى، بل جزء من طقوس الشاي واللمة والاحتفال. للحظات العائلية، الهدايا والمناسبات في دبي.</p><a className="text-link light" href="#contact">تواصل معنا الآن ←</a></div><img className="story-photo" src="https://images.unsplash.com/photo-1749145584776-32db00047168?auto=format&fit=crop&w=1200&q=88" alt="ضيافة مغربية" /></div></section>
 
-      <section className="section cream">
-        <div className="shell">
-          <div className="section-head">
-            <p className="eyebrow green">للمناسبات والهدايا</p>
-            <h2>تشكيلات تناسب كل مناسبة</h2>
-          </div>
-          <div className="occasion-grid">
-            {['رمضان','العيد','الأعراس','الضيافة','هدايا الشركات','المناسبات الخاصة'].map((item) => <div className="occasion-card" key={item}>{item}</div>)}
-          </div>
-        </div>
-      </section>
+      <section className="section cream"><div className="shell"><div className="section-head"><p className="eyebrow green">للمناسبات والهدايا</p><h2>تشكيلات تناسب كل مناسبة</h2></div><div className="occasion-grid">{['رمضان','العيد','الأعراس','الضيافة','هدايا الشركات','المناسبات الخاصة'].map((item) => <div className="occasion-card" key={item}>{item}</div>)}</div></div></section>
 
-      <section id="contact" className="section contact-section">
-        <div className="shell contact-card">
-          <div>
-            <p className="eyebrow gold">الحمداني للحلويات المغربية</p>
-            <h2>جاهز لتذوق النكهة المغربية الأصيلة؟</h2>
-            <p>للطلبات والاستفسارات والمناسبات، تواصل معنا مباشرة أو افتح موقعنا على Google Maps.</p>
-          </div>
-          <div className="contact-actions">
-            <a className="btn btn-orange" href={mapsHref} target="_blank" rel="noreferrer">افتح الموقع على Google Maps</a>
-            <a className="btn btn-light" href="#">واتساب — أضف الرقم عند توفره</a>
-          </div>
-        </div>
-      </section>
+      <section id="contact" className="section contact-section"><div className="shell contact-card"><div><p className="eyebrow gold">الحمداني للحلويات المغربية</p><h2>جاهز لتذوق النكهة المغربية الأصيلة؟</h2><p>للطلبات والاستفسارات والمناسبات، تواصل معنا مباشرة أو افتح موقعنا على Google Maps.</p></div><div className="contact-actions"><a className="btn btn-orange" href={mapsHref} target="_blank" rel="noreferrer">افتح الموقع على Google Maps</a><a className="btn btn-light" href="#">واتساب — أضف الرقم عند توفره</a></div></div></section>
 
-      <footer>
-        <div className="shell footer-row">
-          <Logo />
-          <p>دبي، الإمارات العربية المتحدة</p>
-        </div>
-      </footer>
-
+      <footer><div className="shell footer-row"><Logo /><p>دبي، الإمارات العربية المتحدة</p></div></footer>
       <a className="mobile-whatsapp" href="#contact">اطلب عبر واتساب</a>
     </main>
   );
