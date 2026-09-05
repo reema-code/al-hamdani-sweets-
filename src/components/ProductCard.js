@@ -1,8 +1,8 @@
-export default function ProductCard({ item, index }) {
+export default function ProductCard({ item }) {
   return (
     <article className="product-card">
-      <div className={`product-art art-${(index % 6) + 1}`} aria-hidden="true">
-        <span>✦</span>
+      <div className="product-photo-wrap">
+        <img className="product-photo" src={item.image} alt={item.name} loading="lazy" />
       </div>
       <div className="product-copy">
         <h3>{item.name}</h3>
