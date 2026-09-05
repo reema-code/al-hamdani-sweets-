@@ -26,9 +26,9 @@ export default function HomePage() {
             </div>
           </div>
           <div className="hero-photos" aria-label="حلويات مغربية">
-            <img className="hero-photo hero-photo-main" src="https://images.unsplash.com/photo-Lj6OgKfNkdI?auto=format&fit=crop&w=1200&q=90" alt="أكواب الشاي المغربي بالنعناع" />
-            <img className="hero-photo" src="https://images.unsplash.com/photo-Ae6qKztd0Xw?auto=format&fit=crop&w=800&q=85" alt="طبق من التمور" />
-            <img className="hero-photo" src="https://images.unsplash.com/photo-6i8bpLIWRAg?auto=format&fit=crop&w=800&q=85" alt="تشكيلة ضيافة" />
+            <img className="hero-photo hero-photo-main" src="https://images.pexels.com/photos/30906052/pexels-photo-30906052.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="طقم شاي مغربي تقليدي بالنعناع" />
+            <img className="hero-photo" src="https://images.pexels.com/photos/30593208/pexels-photo-30593208.jpeg?auto=compress&cs=tinysrgb&w=800" alt="طقوس صب الشاي المغربي" />
+            <img className="hero-photo" src="https://images.pexels.com/photos/7249766/pexels-photo-7249766.jpeg?auto=compress&cs=tinysrgb&w=800" alt="طبق من التمور" />
           </div>
         </div>
       </section>
@@ -37,7 +37,7 @@ export default function HomePage() {
 
       <section className="section cream"><div className="shell"><div className="section-head"><p className="eyebrow green">من المغرب إلى مائدتكم</p><h2>حلويات تحمل روح المغرب</h2><p>وصفات كلاسيكية بطابع أنيق، من اللوز والعسل إلى ماء الزهر والسمسم.</p></div><div className="products-grid">{products.map((item) => <ProductCard key={item.name} item={item} />)}</div></div></section>
 
-      <section className="section story"><div className="shell split"><div><p className="eyebrow gold">حلاوة المغرب كما نعرفها</p><h2>تفاصيل صغيرة، ضيافة كبيرة.</h2><p>الحلويات المغربية ليست مجرد حلوى، بل جزء من طقوس الشاي واللمة والاحتفال. للحظات العائلية، الهدايا والمناسبات في دبي.</p><a className="text-link light" href="#contact">تواصل معنا الآن ←</a></div><img className="story-photo" src="https://images.unsplash.com/photo-_V4v7BbG338?auto=format&fit=crop&w=1200&q=88" alt="ضيافة مغربية" /></div></section>
+      <section className="section story"><div className="shell split"><div><p className="eyebrow gold">حلاوة المغرب كما نعرفها</p><h2>تفاصيل صغيرة، ضيافة كبيرة.</h2><p>الحلويات المغربية ليست مجرد حلوى، بل جزء من طقوس الشاي واللمة والاحتفال. للحظات العائلية، الهدايا والمناسبات في دبي.</p><a className="text-link light" href="#contact">تواصل معنا الآن ←</a></div><img className="story-photo" src="https://images.pexels.com/photos/4499229/pexels-photo-4499229.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="ضيافة مغربية" /></div></section>
 
       <section className="section cream"><div className="shell"><div className="section-head"><p className="eyebrow green">للمناسبات والهدايا</p><h2>تشكيلات تناسب كل مناسبة</h2></div><div className="occasion-grid">{['رمضان','العيد','الأعراس','الضيافة','هدايا الشركات','المناسبات الخاصة'].map((item) => <div className="occasion-card" key={item}>{item}</div>)}</div></div></section>
 
