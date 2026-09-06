@@ -19,7 +19,7 @@ export default function HomePage() {
         <div className="shell hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">وجهتك المغربية الأولى في دبي</p>
-            <h1>كل ما هو مغربي أصيل، في مكان واحد.</h1>
+            <h1>حلويات تُحضّر بحب، وتُقدّم بكرم</h1>
             <p className="lead">حلويات ومخبوزات، شاي وتوابل، أدوات مطبخ وطواجن، منتجات حمام مغربي وجمال، وتحف للمنزل والديكور — مختارة بعناية وموصّلة أينما كنت في دبي.</p>
             <div className="actions">
               <a className="btn btn-orange" href={whatsappHref}>اطلب عبر واتساب</a>
@@ -60,12 +60,12 @@ export default function HomePage() {
 
       <section id="kitchen" className="section split-section">
         <div className="shell split">
-          <img className="split-photo" src="/images/section-tea.jpg" alt="طقوس صب الشاي المغربي التقليدية" />
+          <img className="split-photo tajine-photo" src="/images/product-tajine.png" alt="طاجين تقديم مغربي مزخرف باللون الأزرق" />
           <div>
-            <p className="eyebrow gold">طقوس الشاي</p>
-            <h2>الشاي الأخضر، بروح الضيافة المغربية.</h2>
-            <p>الشاي في المغرب ليس مجرد مشروب، بل طقس كامل — نعناع طازج، سكر، وصب من علٍ ليتشكل الرغوة المثالية. نقدّم الشاي، النعناع المجفف، وأطقم البرّاد والكؤوس لإحياء هذه الطقوس في بيتك.</p>
-            <a className="text-link" href="#products">تسوق الشاي والتوابل ←</a>
+            <p className="eyebrow gold">الطاجين المغربي</p>
+            <h2>طاجين أصيل، لمائدة تحكي حكاية.</h2>
+            <p>طاجين خزفي مغربي مزخرف يدوياً بنقوش زرقاء أصيلة، صُمّم ليضفي على التقديم لمسة دافئة من روح المغرب ويجعل كل مائدة أكثر تميزاً.</p>
+            <a className="text-link" href="#products">تسوق الطواجن ←</a>
           </div>
         </div>
       </section>
