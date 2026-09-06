@@ -92,6 +92,7 @@ img{display:block;max-width:100%}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center}
 .split.reverse{direction:rtl}
 .split-photo{width:100%;height:380px;object-fit:cover;border-radius:22px;box-shadow:0 16px 40px rgba(23,63,56,.14)}
+.tajine-photo{object-fit:contain;background:#fff;padding:24px}
 .split-section h2{margin:12px 0 14px}
 .split-section p{line-height:1.9;color:var(--text-soft);max-width:46ch}
 
