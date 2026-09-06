@@ -71,12 +71,42 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="feature-banner sweets-banner" aria-labelledby="sweets-banner-title">
+        <img src="/images/category-sweets.jpg" alt="تشكيلة من الحلويات المغربية التقليدية" width="1408" height="768" />
+        <div className="feature-banner-shade" />
+        <div className="shell feature-banner-copy">
+          <p className="eyebrow gold">حلويات وضيافة</p>
+          <h2 id="sweets-banner-title">حلويات مغربية تزيّن لَمّة الشاي.</h2>
+          <p>تشكيلة تقليدية للمائدة والضيافة والمناسبات.</p>
+          <a className="btn btn-light" href="#products">شاهد الحلويات</a>
+        </div>
+      </section>
+
       <ProductGroup
         id="products"
         eyebrow="حلويات مغربية"
         title="حلاوة الضيافة المغربية"
         intro="نبدأ بما يليق بالمائدة المغربية: حلويات تقليدية للتقديم مع الشاي وفي المناسبات."
         items={productGroups.sweets}
+      />
+
+      <section id="tajine" className="feature-banner tajine-banner" aria-labelledby="tajine-banner-title">
+        <img src="/images/hero-kitchen.jpg" alt="طاجين مغربي مطهو ومقدّم على مائدة تقليدية" width="1000" height="666" />
+        <div className="feature-banner-shade" />
+        <div className="shell feature-banner-copy">
+          <p className="eyebrow gold">الطاجين المغربي</p>
+          <h2 id="tajine-banner-title">الطاجين في قلب المائدة المغربية.</h2>
+          <p>صورة لطبق طاجين مطهو؛ اكتشفوا أواني الطاجين والتقديم ضمن مجموعة المطبخ.</p>
+          <a className="btn btn-light" href="#kitchen-products">شاهد مجموعة المطبخ</a>
+        </div>
+      </section>
+
+      <ProductGroup
+        id="kitchen-products"
+        eyebrow="المائدة والتقديم"
+        title="أوانٍ لطقوس الضيافة"
+        intro="طاجين التقديم والبرّاد والكؤوس المغربية لإكمال المائدة."
+        items={productGroups.kitchen}
       />
 
       <section id="kitchen" className="section split-section">
@@ -98,14 +128,6 @@ export default function HomePage() {
         intro="شاي المائدة وتوابل مختارة من المنتجات المتوفرة في مجموعتنا."
         items={productGroups.tea}
         tone="cream"
-      />
-
-      <ProductGroup
-        id="kitchen-products"
-        eyebrow="المائدة والتقديم"
-        title="أوانٍ لطقوس الضيافة"
-        intro="طاجين التقديم والبرّاد والكؤوس المغربية لإكمال المائدة."
-        items={productGroups.kitchen}
       />
 
       <section id="hammam" className="section hammam-section">
