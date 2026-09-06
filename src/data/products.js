@@ -1,32 +1,42 @@
 export const products = [
   {
-    name: 'شاي أخضر مغربي بالنعناع',
-    desc: 'شاي أخضر فاخر يُقدم بطقوس الضيافة المغربية الأصيلة.',
-    image: 'https://images.pexels.com/photos/30906052/pexels-photo-30906052.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    name: 'شاي أخضر مغربي 4011',
+    desc: 'شاي أخضر صيني فاخر، أساس طقس الشاي المغربي.',
+    image: '/images/product-tea.png'
   },
   {
     name: 'الشباكية',
     desc: 'عسل، سمسم وتوابل مغربية بطابع رمضاني أصيل.',
-    image: 'https://images.pexels.com/photos/10819659/pexels-photo-10819659.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    image: '/images/product-chebakia.png'
   },
   {
-    name: 'كعب الغزال',
-    desc: 'حلوى مغربية راقية بحشوة اللوز وماء الزهر.',
-    image: 'https://images.pexels.com/photos/9368675/pexels-photo-9368675.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    name: 'زعفران تاليوين',
+    desc: 'خيوط زعفران أصلية من منطقة تالوين المغربية.',
+    image: '/images/product-saffron.png'
   },
   {
-    name: 'الفقاص',
-    desc: 'بسكويت مغربي مقرمش باللوز، مثالي مع الشاي.',
-    image: 'https://images.pexels.com/photos/1626668/pexels-photo-1626668.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    name: 'طاجين تقديم فاسي',
+    desc: 'طاجين خزفي مرسوم يدوياً للتقديم على المائدة.',
+    image: '/images/product-tajine.png'
   },
   {
-    name: 'غريبة بهلة',
-    desc: 'غريبة مغربية هشة بنكهة تقليدية دافئة.',
-    image: 'https://images.pexels.com/photos/5485114/pexels-photo-5485114.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    name: 'أكواب الشاي المغربي',
+    desc: 'طقم كؤوس شاي مذهبة، مرسومة يدوياً بنقوش تقليدية.',
+    image: '/images/product-glasses.png'
   },
   {
-    name: 'بريوات اللوز',
-    desc: 'رقائق مقرمشة محشوة باللوز والعسل.',
-    image: 'https://images.pexels.com/photos/8081574/pexels-photo-8081574.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    name: 'الصابون البلدي',
+    desc: 'صابون بلدي أسود بزيت الأوكاليبتوس لتقشير طبيعي.',
+    image: '/images/product-soap.png'
+  },
+  {
+    name: 'زيت الأركان الأصلي',
+    desc: 'زيت أركان مغربي أصلي 100% للوجه والشعر والجسم.',
+    image: '/images/product-argan.png'
+  },
+  {
+    name: 'براد شاي نحاسي',
+    desc: 'براد شاي نحاسي مطروق يدوياً بالطريقة التقليدية.',
+    image: '/images/product-teapot.png'
   }
 ];

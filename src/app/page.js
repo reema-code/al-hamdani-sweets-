@@ -27,9 +27,9 @@ export default function HomePage() {
             </div>
           </div>
           <div className="hero-photos" aria-label="منتجات مغربية متنوعة">
-            <img className="hero-photo hero-photo-main" src="https://images.pexels.com/photos/34529131/pexels-photo-34529131.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="سوق مغربي تقليدي بالفخار والأواني" />
-            <img className="hero-photo" src="https://images.pexels.com/photos/28730586/pexels-photo-28730586.jpeg?auto=compress&cs=tinysrgb&w=800" alt="فوانيس مغربية ملونة" />
-            <img className="hero-photo" src="https://images.pexels.com/photos/6429668/pexels-photo-6429668.jpeg?auto=compress&cs=tinysrgb&w=800" alt="زيت الأركان المغربي الأصلي" />
+            <img className="hero-photo hero-photo-main" src="/images/hero-souk.jpg" alt="سوق مغربي تقليدي بالفوانيس والحرف اليدوية" />
+            <img className="hero-photo" src="/images/hero-hammam.jpg" alt="منتجات الحمام المغربي الطبيعية" />
+            <img className="hero-photo" src="/images/hero-kitchen.jpg" alt="مائدة مغربية بالطواجن التقليدية" />
           </div>
         </div>
       </section>
@@ -60,7 +60,7 @@ export default function HomePage() {
 
       <section id="kitchen" className="section split-section">
         <div className="shell split">
-          <img className="split-photo" src="https://images.pexels.com/photos/30593208/pexels-photo-30593208.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="طقوس صب الشاي المغربي التقليدية في فاس" />
+          <img className="split-photo" src="/images/section-tea.jpg" alt="طقوس صب الشاي المغربي التقليدية" />
           <div>
             <p className="eyebrow gold">طقوس الشاي</p>
             <h2>الشاي الأخضر، بروح الضيافة المغربية.</h2>
@@ -72,7 +72,7 @@ export default function HomePage() {
 
       <section id="hammam" className="section hammam-section">
         <div className="shell split reverse">
-          <img className="split-photo" src="https://images.pexels.com/photos/7797851/pexels-photo-7797851.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="منتجات الحمام المغربي الطبيعية: صابون بلدي وزيوت طبيعية" />
+          <img className="split-photo" src="/images/section-hammam.jpg" alt="حمام مغربي تقليدي بالزليج والفوانيس" />
           <div>
             <p className="eyebrow gold">الحمام المغربي والجمال</p>
             <h2>طقس الحمام المغربي، كما يجب أن يكون.</h2>
@@ -83,7 +83,7 @@ export default function HomePage() {
       </section>
 
       <section id="contact" className="section delivery-section">
-        <div className="shell delivery-card" style={{ backgroundImage: "url('https://images.pexels.com/photos/35062740/pexels-photo-35062740.jpeg?auto=compress&cs=tinysrgb&w=1600')" }}>
+        <div className="shell delivery-card" style={{ backgroundImage: "url('/images/section-delivery.jpg')" }}>
           <div className="delivery-tint" />
           <div className="delivery-copy">
             <p className="eyebrow gold">التوصيل في دبي</p>
