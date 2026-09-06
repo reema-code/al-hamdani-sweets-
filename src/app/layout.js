@@ -1,8 +1,14 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'الحمداني | متجر مغربي أصيل في دبي',
-  description: 'كل ما هو مغربي أصيل في دبي — حلويات ومخبوزات، شاي وتوابل، أدوات المطبخ والطواجن، منتجات الحمام المغربي والجمال، وتحف للمنزل والديكور.',
+  title: 'الحمداني للحلويات | Al Hamdani Sweets Dubai',
+  description: 'حلويات مغربية أصيلة وهدايا للمناسبات، مختارة بعناية ومقدّمة بكرم في دبي.',
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#0f2b26',
 };
 
 export default function RootLayout({ children }) {
