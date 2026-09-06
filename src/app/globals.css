@@ -160,9 +160,9 @@ footer:before{content:"";display:block;height:5px;background-image:var(--zellij)
   .hero-photo:not(.hero-photo-main){display:none}
   .hero-photo-main{height:260px;border-radius:14px}
   .section{padding:52px 0}
-  .category-grid{grid-template-columns:1fr 1fr;gap:10px}
-  .category-card-copy strong{font-size:.9rem}
-  .category-card-copy small{display:none}
+  .category-grid{grid-template-columns:1fr;gap:12px}
+  .category-card{aspect-ratio:16/10}
+  .category-card-copy strong{font-size:1rem}
   .products-grid{grid-template-columns:1fr 1fr;gap:10px}
   .product-copy{padding:12px 14px}
   .product-copy p{display:none}

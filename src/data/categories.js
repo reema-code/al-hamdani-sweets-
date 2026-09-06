@@ -1,13 +1,13 @@
 export const categories = [
   {
     name: 'حلويات ومخبوزات مغربية',
-    desc: 'شباكية، فقاص، غريبة وكعب الغزال',
+    desc: 'شباكية، فقاص وغريبة',
     href: '#products',
     image: '/images/category-sweets.jpg'
   },
   {
     name: 'المواد الغذائية المغربية',
-    desc: 'تمور، سمن، زيت زيتون وقطاني',
+    desc: 'تمور، سمن، زيت زيتون، قطاني، كسكس، معجون الطماطم، مربى، عسل طبيعي وخل تفاح',
     href: '#products',
     image: '/images/category-pantry.jpg'
   },
@@ -19,7 +19,7 @@ export const categories = [
   },
   {
     name: 'المطبخ والطواجن',
-    desc: 'طواجن تقليدية وأدوات المائدة',
+    desc: 'طواجن تقليدية، أباريق شاي نحاسية، كؤوس مذهبة، صواني تقديم، أدوات مائدة، أطباق فخارية، ملاعق خشبية، مباخر بخور وأواني تقديم',
     href: '#kitchen',
     image: '/images/category-kitchen.jpg'
   },
