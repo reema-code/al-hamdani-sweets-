@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 132" role="img" aria-labelledby="title desc">
+  <title id="title">الحمداني — EL HAMDANI</title>
+  <desc id="desc">شعار الحمداني للحلويات المغربية</desc>
+  <g transform="translate(10 10)" fill="none" stroke-linejoin="round">
+    <path d="M56 0 72 16h24v24l16 16-16 16v24H72l-16 16-16-16H16V72L0 56l16-16V16h24Z" stroke="#bd9546" stroke-width="5"/>
+    <path d="m56 15 12 20 23-3-11 21 17 16-23 3-3 23-16-17-21 11 3-23-20-12 20-12-3-23 21 11Z" stroke="#07533e" stroke-width="7"/>
+    <path d="m56 39 17 17-17 17-17-17Z" fill="#bd9546" stroke="#bd9546" stroke-width="3"/>
+  </g>
+  <text x="495" y="66" direction="rtl" text-anchor="end" fill="#07533e" font-family="Cairo, 'Noto Sans Arabic', sans-serif" font-size="47" font-weight="800">الحمداني</text>
+  <text x="495" y="95" text-anchor="end" fill="#bd9546" font-family="Georgia, serif" font-size="18" font-weight="700" letter-spacing="4">EL HAMDANI</text>
+  <text x="495" y="117" text-anchor="end" fill="#07533e" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="2.2">MOROCCAN SWEETS</text>
+</svg>
