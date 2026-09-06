@@ -1,4 +1,5 @@
 import Header from '../components/Header';
+import Image from 'next/image';
 import Logo from '../components/Logo';
 import ProductCard from '../components/ProductCard';
 import CategoryCard from '../components/CategoryCard';
@@ -16,32 +17,33 @@ export default function HomePage() {
       <Header whatsappHref={whatsappHref} />
 
       <section className="hero">
+        <div className="zellij-corner zellij-corner-top" aria-hidden="true" />
         <div className="shell hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">وجهتك المغربية الأولى في دبي</p>
-            <h1>كل ما هو مغربي أصيل، في مكان واحد.</h1>
-            <p className="lead">حلويات ومخبوزات، شاي وتوابل، أدوات مطبخ وطواجن، منتجات حمام مغربي وجمال، وتحف للمنزل والديكور — مختارة بعناية وموصّلة أينما كنت في دبي.</p>
+            <p className="eyebrow">من المغرب إلى داركم في دبي</p>
+            <h1>نكهة الدار المغربية، أقرب إليكم.</h1>
+            <p className="lead">من حلاوة الشباكية وعطر أتاي بالنعناع، إلى زليج المائدة وأسرار الحمّام المغربي. ننتقي لكم ما نحبه في بيوتنا، ونوصّله إلى بابكم في دبي.</p>
             <div className="actions">
-              <a className="btn btn-orange" href={whatsappHref}>اطلب عبر واتساب</a>
-              <a className="btn btn-light" href="#collections">تصفح المجموعات</a>
+              <a className="btn btn-orange" href={whatsappHref}>ابدأ طلبك عبر واتساب</a>
+              <a className="btn btn-light" href="#collections">اكتشف التشكيلة</a>
             </div>
           </div>
           <div className="hero-photos" aria-label="منتجات مغربية متنوعة">
-            <img className="hero-photo hero-photo-main" src="/images/hero-souk.jpg" alt="محل بقالة مغربي تقليدي بالزيتون والليمون والمخللات" />
-            <img className="hero-photo" src="/images/hero-hammam.jpg" alt="منتجات الحمام المغربي الطبيعية: غاسول وصابون بلدي وزيت أركان" />
-            <img className="hero-photo" src="/images/hero-kitchen.jpg" alt="مائدة مغربية بالطواجن التقليدية" />
+            <div className="hero-photo hero-photo-main"><Image src="/images/hero-souk.jpg" alt="منتجات مغربية من الزيتون والليمون المصير" fill priority sizes="(max-width: 960px) 100vw, 48vw" /></div>
+            <div className="hero-photo hero-photo-secondary"><Image src="/images/hero-hammam.jpg" alt="غاسول وصابون بلدي وزيت أركان" fill sizes="(max-width: 960px) 50vw, 24vw" /></div>
+            <div className="hero-photo hero-photo-secondary"><Image src="/images/hero-kitchen.jpg" alt="مائدة مغربية بالطواجن التقليدية" fill sizes="(max-width: 960px) 50vw, 24vw" /></div>
           </div>
         </div>
       </section>
 
-      <section className="trust-strip"><div className="shell trust-grid">{['منتجات مغربية أصيلة', 'تشكيلة من كل الفئات', 'توصيل في دبي', 'طلب سهل عبر واتساب'].map((item) => <span key={item}>✦ {item}</span>)}</div></section>
+      <section className="trust-strip"><div className="shell trust-grid">{['مختارات أصلية من المغرب', 'كل احتياجات الدار', 'توصيل إلى أنحاء دبي', 'طلب سريع عبر واتساب'].map((item) => <span key={item}>✦ {item}</span>)}</div></section>
 
       <section id="collections" className="section cream">
         <div className="shell">
           <div className="section-head">
             <p className="eyebrow green">تسوق حسب المجموعة</p>
-            <h2>كل ما يحتاجه بيت مغربي</h2>
-            <p>من مائدة الشاي إلى الحمام المغربي، وصولاً إلى ديكور المنزل — تشكيلة تجمع كل تفاصيل البيت المغربي الأصيل.</p>
+            <h2>تفاصيل صغيرة تصنع دفء الدار</h2>
+            <p>مائدة عامرة، أتاي في البرّاد، وعناية من خيرات المغرب — مجموعات مختارة لتجدوا كل ما تحبونه بسهولة.</p>
           </div>
           <div className="category-grid">{categories.map((item) => <CategoryCard key={item.name} item={item} />)}</div>
         </div>
@@ -51,8 +53,8 @@ export default function HomePage() {
         <div className="shell">
           <div className="section-head">
             <p className="eyebrow gold">الأكثر طلباً</p>
-            <h2>مختارات تحمل روح المغرب</h2>
-            <p>من كعب الغزال إلى كأس الشاي الأخضر — القطع الأكثر طلباً لدى عملائنا.</p>
+            <h2>المفضّلات التي تعودون إليها</h2>
+            <p>نكهات مألوفة وقطع تحكي حكاية الصنعة المغربية؛ هذه أكثر اختيارات زبائننا طلباً.</p>
           </div>
           <div className="products-grid">{products.map((item) => <ProductCard key={item.name} item={item} />)}</div>
         </div>
@@ -60,24 +62,24 @@ export default function HomePage() {
 
       <section id="kitchen" className="section split-section">
         <div className="shell split">
-          <img className="split-photo" src="/images/section-tea.jpg" alt="طقوس صب الشاي المغربي التقليدية" />
+          <Image className="split-photo" src="/images/section-tea.jpg" alt="طقوس صب الشاي المغربي التقليدية" width={1200} height={800} sizes="(max-width: 960px) 100vw, 50vw" />
           <div>
             <p className="eyebrow gold">طقوس الشاي</p>
-            <h2>الشاي الأخضر، بروح الضيافة المغربية.</h2>
-            <p>الشاي في المغرب ليس مجرد مشروب، بل طقس كامل — نعناع طازج، سكر، وصب من علٍ ليتشكل الرغوة المثالية. نقدّم الشاي، النعناع المجفف، وأطقم البرّاد والكؤوس لإحياء هذه الطقوس في بيتك.</p>
-            <a className="text-link" href="#products">تسوق الشاي والتوابل ←</a>
+            <h2>كأس أتاي… وترحاب من القلب.</h2>
+            <p>في المغرب، لا تكتمل اللّمّة من دون أتاي. شاي أخضر ونعناع عطِر، يُصبّان في كؤوس منقوشة ليبدأ الحديث. اخترنا لكم لوازم الطقس كاملة، من البرّاد إلى آخر كأس.</p>
+            <a className="text-link" href="#products">اكتشف ركن الشاي والتوابل ←</a>
           </div>
         </div>
       </section>
 
       <section id="hammam" className="section hammam-section">
         <div className="shell split reverse">
-          <img className="split-photo" src="/images/section-hammam.jpg" alt="حمام مغربي تقليدي بالزليج والفوانيس" />
+          <Image className="split-photo" src="/images/section-hammam.jpg" alt="حمام مغربي تقليدي بالزليج والفوانيس" width={1200} height={800} sizes="(max-width: 960px) 100vw, 50vw" />
           <div>
             <p className="eyebrow gold">الحمام المغربي والجمال</p>
-            <h2>طقس الحمام المغربي، كما يجب أن يكون.</h2>
-            <p>صابون بلدي أسود، غاسول الأطلس، وزيت الأركان الأصلي المعصور على البارد — منتجات طبيعية 100% من المغرب، لتجربة حمام مغربي أصيلة في منزلك.</p>
-            <a className="text-link light" href="#products">تسوق منتجات الحمام ←</a>
+            <h2>عناية مغربية توارثنا أسرارها.</h2>
+            <p>صابون بلدي، غاسول الأطلس وزيت أركان أصلي — ثلاث خطوات بسيطة تمنحكم طقساً دافئاً للعناية، بخيرات قادمة من المغرب.</p>
+            <a className="text-link light" href="#products">اكتشف ركن الحمّام ←</a>
           </div>
         </div>
       </section>
@@ -87,8 +89,8 @@ export default function HomePage() {
           <div className="delivery-tint" />
           <div className="delivery-copy">
             <p className="eyebrow gold">التوصيل في دبي</p>
-            <h2>نوصّل طلبك أينما كنت في دبي.</h2>
-            <p>اطلب عبر واتساب، ونحن نجهّز طلبك ونوصله بسرعة إلى باب منزلك — أو تفضّل بزيارتنا مباشرة.</p>
+            <h2>من رفوفنا إلى باب داركم.</h2>
+            <p>أرسلوا قائمتكم عبر واتساب، وسنتولى تجهيزها بعناية وتوصيلها في دبي. ويمكنكم دائماً زيارتنا واختيار ما تحبون بأنفسكم.</p>
             <div className="contact-actions">
               <a className="btn btn-orange" href={whatsappHref}>اطلب عبر واتساب</a>
               <a className="btn btn-light" href={mapsHref} target="_blank" rel="noreferrer">موقعنا على الخريطة</a>
