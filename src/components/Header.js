@@ -3,10 +3,8 @@ import Logo from './Logo';
 const links = [
   { label: 'المجموعات', href: '#collections' },
   { label: 'الأكثر مبيعاً', href: '#products' },
-  { label: 'المطبخ', href: '#kitchen' },
+  { label: 'المطبخ والشاي', href: '#kitchen' },
   { label: 'الحمام المغربي', href: '#hammam' },
-  { label: 'المنزل', href: '#collections' },
-  { label: 'من نحن', href: '#story' },
   { label: 'تواصل معنا', href: '#contact' }
 ];
 

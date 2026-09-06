@@ -4,7 +4,7 @@ export default function Logo() {
       <span className="logo-mark">✦</span>
       <div>
         <strong>الحمداني</strong>
-        <small>لكل ما هو مغربي أصيل</small>
+        <small>للحلويات المغربية</small>
       </div>
     </div>
   );
