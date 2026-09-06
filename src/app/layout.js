@@ -3,7 +3,6 @@ import './globals.css';
 export const metadata = {
   title: 'EL HAMDANI | الحمداني للمنتجات المغربية في دبي',
   description: 'كل ما هو مغربي أصيل في دبي — حلويات ومخبوزات، شاي وتوابل، أدوات المطبخ والطواجن، منتجات الحمام المغربي والجمال، وتحف للمنزل والديكور.',
-  icons: { icon: '/emblem.svg' },
 };
 
 export default function RootLayout({ children }) {
