@@ -52,6 +52,17 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section id="collections" className="section cream">
+        <div className="shell">
+          <div className="section-head">
+            <p className="eyebrow green">أكثر من الحلوى</p>
+            <h2>من الدار المغربية</h2>
+            <p>نكهات، أدوات وطقوس تكمل تجربة الضيافة.</p>
+          </div>
+          <div className="category-grid">{categories.map((item) => <CategoryCard key={item.name} item={item} />)}</div>
+        </div>
+      </section>
+
       <section id="products" className="section">
         <div className="shell">
           <div className="section-head">
@@ -63,13 +74,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="heritage-strip" style={{ backgroundImage: "url('/images/hero-kitchen.jpg')" }}>
+      <section className="heritage-strip" style={{ backgroundImage: "url('/images/category-kitchen.jpg')" }}>
         <span>أصالة تتوارثها الأجيال</span>
       </section>
 
       <section id="story" className="section split-section">
         <div className="shell split">
-          <img className="split-photo" src="/images/section-tea.jpg" alt="صب الشاي المغربي التقليدي بالنعناع" />
+          <img className="split-photo" src="/images/hero-kitchen.jpg" alt="مائدة طواجن مغربية بالزيتون وماء الورد وكؤوس الشاي" />
           <div>
             <h2>حكاية من الطعم الأصيل</h2>
             <p>نؤمن أن الحلوى ليست مجرد مذاق؛ إنها ترحيب، وذكرى، وتفصيل جميل يجمع الأحبة. لذلك نختار وصفاتنا ومكوّناتنا بروح الصنعة المغربية وكرم الضيافة العربية.</p>
@@ -88,17 +99,6 @@ export default function HomePage() {
             <div className="pill-row">{giftTags.map((tag) => <span className="pill" key={tag}>{tag}</span>)}</div>
             <a className="text-link light" href={whatsappHref}>اطلب تنسيق هديتك ←</a>
           </div>
-        </div>
-      </section>
-
-      <section id="collections" className="section cream">
-        <div className="shell">
-          <div className="section-head">
-            <p className="eyebrow green">أكثر من الحلوى</p>
-            <h2>من الدار المغربية</h2>
-            <p>نكهات، أدوات وطقوس تكمل تجربة الضيافة.</p>
-          </div>
-          <div className="category-grid">{categories.map((item) => <CategoryCard key={item.name} item={item} />)}</div>
         </div>
       </section>
 
