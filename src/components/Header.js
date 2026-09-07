@@ -18,7 +18,7 @@ export default function Header({ whatsappHref }) {
             <a key={link.label} href={link.href}>{link.label}</a>
           ))}
         </nav>
-        <a className="nav-cta" href={whatsappHref} target="_blank" rel="noreferrer">اطلب الآن ←</a>
+        <a className="btn btn-ink" href={whatsappHref} target="_blank" rel="noreferrer">اطلب الآن</a>
       </div>
     </header>
   );
