@@ -2,19 +2,19 @@ export const categories = [
   {
     name: 'حلويات ومخبوزات مغربية',
     desc: 'شباكية، فقاص وغريبة',
-    href: '#products',
-    image: '/images/category-sweets.jpg'
+    href: '#sweets',
+    image: null
   },
   {
     name: 'المواد الغذائية المغربية',
     desc: 'تمور، سمن، زيت زيتون، قطاني، كسكس، معجون الطماطم، مربى، عسل طبيعي وخل تفاح',
-    href: '#products',
+    href: '#pantry',
     image: '/images/category-pantry.jpg'
   },
   {
     name: 'الشاي والقهوة والتوابل',
     desc: 'شاي أخضر، نعناع، رأس الحانوت وزعفران',
-    href: '#products',
+    href: '#pantry',
     image: '/images/category-tea.jpg'
   },
   {
@@ -31,8 +31,8 @@ export const categories = [
   },
   {
     name: 'رمضان والمناسبات',
-    desc: 'علب هدايا وتشكيلات المناسبات',
+    desc: 'جلسات أتاي ودفء الضيافة',
     href: '#products',
-    image: '/images/category-ramadan.jpg'
+    image: '/images/section-tea.jpg'
   }
 ];
