@@ -15,38 +15,38 @@ const trustItems = [
   { title: 'توصيل داخل الإمارات', desc: 'طلباتكم تصل بعناية' }
 ];
 
-const giftOccasions = ['رمضان والعيد', 'المناسبات العائلية', 'هدايا الشركات'];
+const giftTags = ['رمضان والعيد', 'المناسبات العائلية', 'هدايا الشركات'];
 
 export default function HomePage() {
-  const [leadTestimonial, ...supportTestimonials] = testimonials;
-
   return (
     <main>
       <Header whatsappHref={whatsappHref} />
 
       <section className="hero">
-        <div className="hero-panel">
-          <div className="shell hero-panel-inner">
+        <div className="shell hero-grid">
+          <div className="hero-copy">
+            <p className="eyebrow">صناعة مغربية · ضيافة إماراتية</p>
             <h1>حلويات تُحضّر بحب، وتُقدّم بكرم.</h1>
             <p className="lead">مذاقات مغربية أصيلة، مختارة لترافق أجمل لمّاتكم ومناسباتكم في دبي.</p>
             <div className="actions">
-              <a className="btn btn-brass" href={whatsappHref}>اطلب عبر واتساب</a>
-              <a className="btn btn-outline" href="#products">اكتشف مختاراتنا</a>
+              <a className="btn btn-orange" href={whatsappHref}>اطلب عبر واتساب</a>
+              <a className="btn btn-light" href="#products">اكتشف مختاراتنا</a>
             </div>
           </div>
-        </div>
-        <div className="hero-photo-bleed">
-          <img src="/images/category-sweets.jpg" alt="طبق من الشباكية والغريبة والسلو مع أدوات الشاي المغربي" />
-          <span className="hero-caption">A tradition worth sharing</span>
+          <div className="hero-photos hero-photos-single">
+            <img className="hero-photo hero-photo-main" src="/images/category-sweets.jpg" alt="طبق من الشباكية والغريبة والسلو مع أدوات الشاي المغربي" />
+            <span className="hero-caption">A tradition worth sharing</span>
+          </div>
         </div>
       </section>
 
       <section className="trust-strip">
-        <div className="shell trust-row divider-list">
-          {trustItems.map((item) => (
-            <div className="trust-chip" key={item.title}>
-              <strong>{item.title}</strong>
-              <span>{item.desc}</span>
+        <div className="shell trust-grid">
+          {trustItems.map((item, i) => (
+            <div className="trust-item" key={item.title}>
+              <span className="trust-num">{String(i + 1).padStart(2, '0')}</span>
+              <h4>{item.title}</h4>
+              <p>{item.desc}</p>
             </div>
           ))}
         </div>
@@ -55,18 +55,18 @@ export default function HomePage() {
       <section id="collections" className="section cream">
         <div className="shell">
           <div className="section-head">
+            <p className="eyebrow green">أكثر من الحلوى</p>
             <h2>من الدار المغربية</h2>
             <p>نكهات، أدوات وطقوس تكمل تجربة الضيافة.</p>
           </div>
-          <div className="category-grid">
-            {categories.map((item, i) => <CategoryCard key={item.name} item={item} featured={i === 0} />)}
-          </div>
+          <div className="category-grid">{categories.map((item) => <CategoryCard key={item.name} item={item} />)}</div>
         </div>
       </section>
 
       <section id="products" className="section">
         <div className="shell">
           <div className="section-head">
+            <p className="eyebrow green">من واجهة الحمداني</p>
             <h2>مختارات الحمداني</h2>
             <p>قطع مختارة بعناية، للضيافة اليومية ولكل مناسبة تستحق طعمًا لا يُنسى.</p>
           </div>
@@ -93,17 +93,11 @@ export default function HomePage() {
         <div className="shell split reverse">
           <img className="split-photo" src="/images/category-ramadan.jpg" alt="مائدة إفطار رمضانية مغربية بالتمور والشاي" />
           <div>
+            <p className="eyebrow gold">صُنعت للإهداء</p>
             <h2>هدايا لكل مناسبة</h2>
             <p>تشكيلات أنيقة لرمضان والعيد، للّمة العائلية، ولهدايا الشركات. نساعدكم في اختيار ما يليق بالمناسبة وتنسيقه بعناية.</p>
-            <div className="divider-list">
-              {giftOccasions.map((tag, i) => (
-                <span className="tag-chip" key={tag}>
-                  {i > 0 && <span className="dot">◆</span>}
-                  <strong>{tag}</strong>
-                </span>
-              ))}
-            </div>
-            <a className="text-link light" href={whatsappHref}>اطلب تنسيق هديتك</a>
+            <div className="pill-row">{giftTags.map((tag) => <span className="pill" key={tag}>{tag}</span>)}</div>
+            <a className="text-link light" href={whatsappHref}>اطلب تنسيق هديتك ←</a>
           </div>
         </div>
       </section>
@@ -111,21 +105,16 @@ export default function HomePage() {
       <section className="section cream">
         <div className="shell">
           <div className="section-head">
+            <p className="eyebrow green">قالوا عنّا</p>
             <h2>ثقة نتشرّف بها</h2>
           </div>
-          <div className="testimonial-feature">
-            <figure className="testimonial-lead">
-              <blockquote>“{leadTestimonial.text}”</blockquote>
-              <figcaption><strong>{leadTestimonial.name}</strong><span>{leadTestimonial.location}</span></figcaption>
-            </figure>
-            <div className="testimonial-support">
-              {supportTestimonials.map((t) => (
-                <figure key={t.name}>
-                  <blockquote>“{t.text}”</blockquote>
-                  <figcaption><strong>{t.name}</strong><span>{t.location}</span></figcaption>
-                </figure>
-              ))}
-            </div>
+          <div className="testimonial-grid">
+            {testimonials.map((t) => (
+              <figure className="testimonial-card" key={t.name}>
+                <blockquote>“{t.text}”</blockquote>
+                <figcaption><strong>{t.name}</strong><span>{t.location}</span></figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>
@@ -133,10 +122,11 @@ export default function HomePage() {
       <section id="contact" className="contact-band">
         <div className="shell contact-band-row">
           <div>
+            <p className="eyebrow gold">نكهتكم المفضّلة أقرب</p>
             <h2>اطلب حلوياتك المفضلة اليوم</h2>
             <p>أرسل لنا طلبك، وسنساعدك في اختيار الكمية والتشكيلة المناسبة.</p>
           </div>
-          <a className="btn btn-brass" href={whatsappHref}>تواصل عبر واتساب</a>
+          <a className="btn btn-gold" href={whatsappHref}>تواصل عبر واتساب ←</a>
         </div>
       </section>
 
