@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import Logo from '../components/Logo';
+import SectionMark from '../components/SectionMark';
 import ProductCard from '../components/ProductCard';
 import CategoryCard from '../components/CategoryCard';
 import { products } from '../data/products';
@@ -55,6 +56,7 @@ export default function HomePage() {
       <section id="collections" className="section cream">
         <div className="shell">
           <div className="section-head">
+            <SectionMark />
             <p className="eyebrow green">أكثر من الحلوى</p>
             <h2>من الدار المغربية</h2>
             <p>نكهات، أدوات وطقوس تكمل تجربة الضيافة.</p>
@@ -66,9 +68,10 @@ export default function HomePage() {
       <section id="products" className="section">
         <div className="shell">
           <div className="section-head">
+            <SectionMark />
             <p className="eyebrow green">من واجهة الحمداني</p>
             <h2>مختارات الحمداني</h2>
-            <p>قطع مختارة بعناية، للضيافة اليومية ولكل مناسبة تستحق طعمًا لا يُنسى.</p>
+            <p>قطع مختارة بعناية، تليق بضيافتكم اليومية وأجمل مناسباتكم.</p>
           </div>
           <div className="products-grid">{products.map((item) => <ProductCard key={item.name} item={item} />)}</div>
         </div>
@@ -82,8 +85,9 @@ export default function HomePage() {
         <div className="shell split">
           <img className="split-photo" src="/images/hero-kitchen.jpg" alt="مائدة طواجن مغربية بالزيتون وماء الورد وكؤوس الشاي" />
           <div>
+            <SectionMark />
             <h2>حكاية من الطعم الأصيل</h2>
-            <p>نؤمن أن الحلوى ليست مجرد مذاق؛ إنها ترحيب، وذكرى، وتفصيل جميل يجمع الأحبة. لذلك نختار وصفاتنا ومكوّناتنا بروح الصنعة المغربية وكرم الضيافة العربية.</p>
+            <p>الحلوى عندنا ترحيب وذكرى، تفصيل صغير يجمع الأحبة حول مائدة واحدة. لذلك نختار وصفاتنا ومكوّناتنا بروح الصنعة المغربية وكرم الضيافة العربية.</p>
             <p className="story-caption">من المغرب، إلى مجالسكم</p>
           </div>
         </div>
@@ -93,6 +97,7 @@ export default function HomePage() {
         <div className="shell split reverse">
           <img className="split-photo" src="/images/category-ramadan.jpg" alt="مائدة إفطار رمضانية مغربية بالتمور والشاي" />
           <div>
+            <SectionMark light />
             <p className="eyebrow gold">صُنعت للإهداء</p>
             <h2>هدايا لكل مناسبة</h2>
             <p>تشكيلات أنيقة لرمضان والعيد، للّمة العائلية، ولهدايا الشركات. نساعدكم في اختيار ما يليق بالمناسبة وتنسيقه بعناية.</p>
@@ -105,6 +110,7 @@ export default function HomePage() {
       <section className="section cream">
         <div className="shell">
           <div className="section-head">
+            <SectionMark />
             <p className="eyebrow green">قالوا عنّا</p>
             <h2>ثقة نتشرّف بها</h2>
           </div>
