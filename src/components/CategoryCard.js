@@ -5,6 +5,7 @@ export default function CategoryCard({ item }) {
       <span className="category-card-copy">
         <strong>{item.name}</strong>
         <small>{item.desc}</small>
+        <span className="category-arrow" aria-hidden="true">←</span>
       </span>
     </a>
   );

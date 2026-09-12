@@ -7,13 +7,13 @@ import { productLibrary, productsByCategory } from '../data/products';
 import { categories } from '../data/categories';
 import { testimonials } from '../data/testimonials';
 
-const whatsappHref = '#contact';
+const whatsappHref = 'https://wa.me/?text=' + encodeURIComponent('مرحباً الحمداني، أود الاستفسار عن المنتجات المتوفرة والطلب.');
 
 const trustItems = [
-  { title: 'تُحضّر طازجة', desc: 'نهتم بكل دفعة كما لو كانت لبيتنا' },
-  { title: 'مكوّنات مختارة', desc: 'جودة تُذاق من أول لقمة' },
-  { title: 'وصفات أصيلة', desc: 'نكهات تحفظ ذاكرة الضيافة' },
-  { title: 'توصيل داخل الإمارات', desc: 'طلباتكم تصل بعناية' }
+  { icon: '✦', title: 'تُحضّر طازجة', desc: 'نهتم بكل دفعة كما لو كانت لبيتنا' },
+  { icon: '❧', title: 'مكوّنات مختارة', desc: 'جودة تُذاق من أول لقمة' },
+  { icon: '◇', title: 'وصفات أصيلة', desc: 'نكهات تحفظ ذاكرة الضيافة' },
+  { icon: '▰', title: 'توصيل داخل الإمارات', desc: 'طلباتكم تصل بعناية' }
 ];
 
 const giftTags = ['رمضان والعيد', 'المناسبات العائلية', 'هدايا الشركات'];
@@ -39,7 +39,7 @@ export default function HomePage() {
           <h1>حلويات تُحضّر بحب، وتُقدّم بكرم.</h1>
           <p className="lead">مذاقات مغربية أصيلة، مختارة لترافق أجمل لمّاتكم ومناسباتكم في دبي.</p>
           <div className="actions">
-            <a className="btn btn-orange" href={whatsappHref}>اطلب عبر واتساب</a>
+            <a className="btn btn-orange" href={whatsappHref} target="_blank" rel="noreferrer">اطلب عبر واتساب <span aria-hidden="true">◉</span></a>
             <a className="btn btn-outline" href="#products">اكتشف مختاراتنا</a>
           </div>
         </div>
@@ -48,17 +48,27 @@ export default function HomePage() {
 
       <section className="trust-strip">
         <div className="shell trust-grid">
-          {trustItems.map((item, i) => (
+          {trustItems.map((item) => (
             <div className="trust-item" key={item.title}>
-              <span className="trust-num">{String(i + 1).padStart(2, '0')}</span>
-              <h4>{item.title}</h4>
-              <p>{item.desc}</p>
+              <span className="trust-icon" aria-hidden="true">{item.icon}</span>
+              <div><h4>{item.title}</h4><p>{item.desc}</p></div>
             </div>
           ))}
         </div>
       </section>
 
-      <section id="products" className="section">
+      <section id="collections" className="section collections-section">
+        <div className="shell">
+          <div className="section-head compact-head">
+            <p className="eyebrow green">اكتشف الدار المغربية</p>
+            <h2>تسوّق حسب الفئة</h2>
+            <p>كل ما يلزم ضيافتكم، في مكان واحد.</p>
+          </div>
+          <div className="category-grid">{categories.map((item) => <CategoryCard key={item.name} item={item} />)}</div>
+        </div>
+      </section>
+
+      <section id="products" className="section products-section">
         <div className="shell">
           <div className="section-head">
             <SectionMark />
@@ -71,23 +81,11 @@ export default function HomePage() {
               <h3>{section.title}</h3>
               <div className="products-grid">
                 {productsByCategory[section.key].map((productKey, i) => (
-                  <ProductCard key={`${section.key}-${productKey}-${i}`} item={productLibrary[productKey]} />
+                  <ProductCard key={`${section.key}-${productKey}-${i}`} item={productLibrary[productKey]} whatsappHref={whatsappHref} />
                 ))}
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      <section id="collections" className="section cream">
-        <div className="shell">
-          <div className="section-head">
-            <SectionMark />
-            <p className="eyebrow green">أكثر من الحلوى</p>
-            <h2>من الدار المغربية</h2>
-            <p>نكهات، أدوات وطقوس تكمل تجربة الضيافة.</p>
-          </div>
-          <div className="category-grid">{categories.map((item) => <CategoryCard key={item.name} item={item} />)}</div>
         </div>
       </section>
 
@@ -142,7 +140,7 @@ export default function HomePage() {
             <h2>اطلب حلوياتك المفضلة اليوم</h2>
             <p>أرسل لنا طلبك، وسنساعدك في اختيار الكمية والتشكيلة المناسبة.</p>
           </div>
-          <a className="btn btn-gold" href={whatsappHref}>تواصل عبر واتساب ←</a>
+          <a className="btn btn-gold" href={whatsappHref} target="_blank" rel="noreferrer">تواصل عبر واتساب ←</a>
         </div>
       </section>
 
@@ -172,7 +170,7 @@ export default function HomePage() {
         </div>
         <div className="shell footer-bottom">© {new Date().getFullYear()} الحمداني للحلويات · Al Hamdani Sweets</div>
       </footer>
-      <a className="mobile-whatsapp" href={whatsappHref}>اطلب عبر واتساب</a>
+      <a className="mobile-whatsapp" href={whatsappHref} target="_blank" rel="noreferrer">اطلب عبر واتساب <span aria-hidden="true">◉</span></a>
     </main>
   );
 }
