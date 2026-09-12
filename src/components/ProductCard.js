@@ -1,4 +1,5 @@
-export default function ProductCard({ item }) {
+export default function ProductCard({ item, whatsappHref }) {
+  const orderHref = `${whatsappHref}${encodeURIComponent(` أود طلب: ${item.name} (${item.price}).`)}`;
   return (
     <article className="product-card">
       <div className="product-photo-wrap">
@@ -9,7 +10,9 @@ export default function ProductCard({ item }) {
         <p>{item.desc}</p>
         <div className="product-foot">
           <strong className="product-price">{item.price}</strong>
-          <a className="text-link" href="#contact">اطلب ←</a>
+          <a className="text-link product-order" href={orderHref} target="_blank" rel="noreferrer">
+            اطلب عبر واتساب <span aria-hidden="true">◉</span>
+          </a>
         </div>
       </div>
     </article>
