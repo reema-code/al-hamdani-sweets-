@@ -24,8 +24,15 @@ export default function HomePage() {
       <Header whatsappHref={whatsappHref} />
 
       <section className="hero">
-        <div className="shell hero-grid">
+        <img
+          className="hero-background"
+          src="/images/category-sweets.jpg"
+          alt="طبق من الشباكية والغريبة والسلو مع أدوات الشاي المغربي"
+        />
+        <div className="hero-shade" aria-hidden="true" />
+        <div className="shell hero-content">
           <div className="hero-copy">
+            <SectionMark light />
             <p className="eyebrow">صناعة مغربية · ضيافة إماراتية</p>
             <h1>حلويات تُحضّر بحب، وتُقدّم بكرم.</h1>
             <p className="lead">مذاقات مغربية أصيلة، مختارة لترافق أجمل لمّاتكم ومناسباتكم في دبي.</p>
@@ -34,10 +41,7 @@ export default function HomePage() {
               <a className="btn btn-light" href="#products">اكتشف مختاراتنا</a>
             </div>
           </div>
-          <div className="hero-photos hero-photos-single">
-            <img className="hero-photo hero-photo-main" src="/images/category-sweets.jpg" alt="طبق من الشباكية والغريبة والسلو مع أدوات الشاي المغربي" />
-            <span className="hero-caption">A tradition worth sharing</span>
-          </div>
+          <span className="hero-caption">A tradition worth sharing</span>
         </div>
       </section>
 
