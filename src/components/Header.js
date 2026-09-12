@@ -1,10 +1,10 @@
 import Logo from './Logo';
 
 const links = [
-  { label: 'المجموعات', href: '#collections' },
-  { label: 'الهدايا', href: '#gifts' },
-  { label: 'حكايتنا', href: '#story' },
   { label: 'مختاراتنا', href: '#products' },
+  { label: 'حكايتنا', href: '#story' },
+  { label: 'الهدايا', href: '#gifts' },
+  { label: 'المجموعات', href: '#collections' },
   { label: 'تواصل معنا', href: '#contact' }
 ];
 

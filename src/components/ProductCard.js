@@ -7,7 +7,10 @@ export default function ProductCard({ item }) {
       <div className="product-copy">
         <h3>{item.name}</h3>
         <p>{item.desc}</p>
-        <a className="text-link" href="#contact">اطلب عبر واتساب</a>
+        <div className="product-foot">
+          <strong className="product-price">{item.price}</strong>
+          <a className="text-link" href="#contact">اطلب ←</a>
+        </div>
       </div>
     </article>
   );

@@ -66,7 +66,7 @@ img{display:block;max-width:100%}
 .trust-item p{margin:0;font-size:.82rem;line-height:1.6;color:var(--text-soft)}
 
 /* ---------- Sections ---------- */
-.section{padding:52px 0}
+.section{padding:76px 0}
 .cream{background:var(--cream)}
 .section-head{max-width:680px;margin:0 auto 28px;text-align:center}
 .section h2{font-family:'Cairo',sans-serif;font-weight:800;font-size:clamp(1.9rem,3.4vw,2.9rem);color:var(--ink);margin:12px 0}
@@ -74,7 +74,7 @@ img{display:block;max-width:100%}
 
 /* ---------- Category grid ---------- */
 .category-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.category-card{position:relative;display:block;aspect-ratio:4/3.3;border-radius:18px;overflow:hidden;background-size:cover;background-position:center;box-shadow:0 10px 28px rgba(23,63,56,.12)}
+.category-card{position:relative;display:block;aspect-ratio:4/3.3;border-radius:10px;overflow:hidden;background-size:cover;background-position:center}
 .category-card-tint{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,43,38,0) 40%,rgba(15,43,38,.82) 100%);transition:.3s}
 .category-card:hover .category-card-tint{background:linear-gradient(180deg,rgba(15,43,38,.15) 20%,rgba(15,43,38,.9) 100%)}
 .category-card-copy{position:absolute;inset-inline:18px;bottom:18px;color:#fff;display:flex;flex-direction:column;gap:4px}
@@ -82,22 +82,24 @@ img{display:block;max-width:100%}
 .category-card-copy small{font-size:.8rem;color:rgba(255,255,255,.82)}
 
 /* ---------- Product grid ---------- */
-.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.product-card{background:#fff;border:1px solid var(--sand-line);border-radius:18px;overflow:hidden;box-shadow:0 12px 30px rgba(49,42,31,.06)}
-.product-photo-wrap{aspect-ratio:4/3.3;overflow:hidden}
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.product-card{background:#fff;border:1px solid var(--sand-line);overflow:hidden}
+.product-photo-wrap{aspect-ratio:4/3.3;overflow:hidden;background:var(--sand)}
 .product-photo{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
-.product-card:hover .product-photo{transform:scale(1.04)}
-.product-copy{padding:18px 20px}
-.product-copy h3{margin:0 0 8px;font-size:1.1rem;font-weight:800}
-.product-copy p{margin:0 0 14px;line-height:1.7;color:var(--text-soft);font-size:.88rem}
-.text-link{font-weight:800;color:var(--clay)}
+.product-card:hover .product-photo{transform:scale(1.03)}
+.product-copy{padding:20px 22px}
+.product-copy h3{margin:0 0 6px;font-size:1.1rem;font-weight:800}
+.product-copy p{margin:0 0 16px;line-height:1.6;color:var(--text-soft);font-size:.86rem}
+.product-foot{display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--sand-line)}
+.product-price{font-size:.86rem;color:var(--ink)}
+.text-link{font-weight:700;color:var(--clay);font-size:.88rem}
 .text-link.light{color:var(--gold)}
 
 /* ---------- Split editorial sections ---------- */
 .split-section{background:var(--sand)}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center}
 .split.reverse{direction:rtl}
-.split-photo{width:100%;height:380px;object-fit:cover;border-radius:22px;box-shadow:0 16px 40px rgba(23,63,56,.14)}
+.split-photo{width:100%;height:380px;object-fit:cover;border-radius:10px}
 .split-section h2{margin:12px 0 14px}
 .split-section p{line-height:1.9;color:var(--text-soft);max-width:46ch}
 
@@ -125,10 +127,11 @@ img{display:block;max-width:100%}
 .btn-gold{background:var(--gold);color:var(--ink-deep);flex-shrink:0}
 
 /* ---------- Testimonials ---------- */
-.testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.testimonial-card{background:#fff;border:1px solid var(--sand-line);border-radius:18px;padding:26px;box-shadow:0 10px 26px rgba(49,42,31,.05)}
-.testimonial-card blockquote{margin:0 0 18px;line-height:1.85;font-size:.95rem}
-.testimonial-card figcaption{display:flex;flex-direction:column;gap:2px;font-size:.82rem;color:var(--text-soft)}
+.testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.testimonial-card{padding:0 32px;border-inline-start:1px solid var(--sand-line)}
+.testimonial-card:first-child{border-inline-start:0;padding-inline-start:0}
+.testimonial-card blockquote{margin:0 0 14px;line-height:1.85;font-size:.95rem}
+.testimonial-card figcaption{display:flex;align-items:baseline;gap:8px;font-size:.82rem;color:var(--text-soft)}
 .testimonial-card figcaption strong{color:var(--ink);font-size:.92rem}
 
 /* ---------- Footer / newsletter ---------- */
