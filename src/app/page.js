@@ -1,6 +1,5 @@
 import Header from '../components/Header';
 import Logo from '../components/Logo';
-import SectionMark from '../components/SectionMark';
 import ProductCard from '../components/ProductCard';
 import CategoryCard from '../components/CategoryCard';
 import { productsByCategory } from '../data/products';
@@ -8,23 +7,13 @@ import { categories } from '../data/categories';
 import { testimonials } from '../data/testimonials';
 
 const whatsappHref = '#contact';
+const featured = productsByCategory.sweets;
 
-const trustItems = [
-  { title: 'تُحضّر طازجة', desc: 'نهتم بكل دفعة كما لو كانت لبيتنا' },
-  { title: 'مكوّنات مختارة', desc: 'جودة تُذاق من أول لقمة' },
-  { title: 'وصفات أصيلة', desc: 'نكهات تحفظ ذاكرة الضيافة' },
-  { title: 'توصيل داخل الإمارات', desc: 'طلباتكم تصل بعناية' }
-];
-
-const giftTags = ['رمضان والعيد', 'المناسبات العائلية', 'هدايا الشركات'];
-
-const productSections = [
-  { key: 'sweets', title: 'حلوياتكم المغربية المفضّلة، جاهزة عند الحمداني' },
-  { key: 'pantry', title: 'نكهات المطبخ المغربي الأصيلة، تجدونها عند الحمداني' },
-  { key: 'tea', title: 'كل ما يلزم جلسة أتاي مغربية، عند الحمداني' },
-  { key: 'kitchen', title: 'طاجينكم اللذيذ يبدأ من أدواته، عند الحمداني' },
-  { key: 'home', title: 'لمسة مغربية أصيلة لمنزلكم، من الحمداني' },
-  { key: 'ramadan', title: 'مائدة رمضان جاهزة بكل تفاصيلها عند الحمداني' }
+const promises = [
+  ['🚚', 'توصيل سريع', 'في دبي والشارقة'],
+  ['◈', 'منتجات أصيلة', 'من المغرب'],
+  ['♢', 'جودة مضمونة', 'مختارة بعناية'],
+  ['♥', 'دعم عبر واتساب', 'سهل ومباشر'],
 ];
 
 export default function HomePage() {
@@ -32,145 +21,74 @@ export default function HomePage() {
     <main>
       <Header whatsappHref={whatsappHref} />
 
-      <section className="hero" style={{ backgroundImage: "url('/images/category-sweets.jpg')" }}>
-        <div className="hero-tint" />
-        <div className="shell hero-content">
-          <p className="eyebrow">صناعة مغربية · ضيافة إماراتية</p>
-          <h1>حلويات تُحضّر بحب، وتُقدّم بكرم.</h1>
-          <p className="lead">مذاقات مغربية أصيلة، مختارة لترافق أجمل لمّاتكم ومناسباتكم في دبي.</p>
-          <div className="actions">
-            <a className="btn btn-orange" href={whatsappHref}>اطلب عبر واتساب</a>
-            <a className="btn btn-outline" href="#products">اكتشف مختاراتنا</a>
-          </div>
+      <section className="hero" aria-label="منتجات مغربية أصيلة في دبي">
+        <div className="hero-copy">
+          <p className="hero-kicker">أصالة المغرب، أقرب إليك</p>
+          <h1>المغرب في كل تفصيلة</h1>
+          <h2>منتجات أصيلة ... الآن في دبي</h2>
+          <p>حلويات | مأكولات | شاي وقهوة | توابل | أدوات المطبخ<br />منتجات الحمام | منتجات البيت</p>
+          <a className="primary-button" href={whatsappHref}>اطلب الآن عبر واتساب <b>◌</b></a>
         </div>
-        <span className="hero-caption">A tradition worth sharing</span>
+        <span className="hero-script">Authentic Morocco<br />Now in Dubai</span>
       </section>
 
-      <section className="trust-strip">
-        <div className="shell trust-grid">
-          {trustItems.map((item, i) => (
-            <div className="trust-item" key={item.title}>
-              <span className="trust-num">{String(i + 1).padStart(2, '0')}</span>
-              <h4>{item.title}</h4>
-              <p>{item.desc}</p>
-            </div>
+      <section className="promise-strip">
+        <div className="shell promise-grid">
+          {promises.map(([icon, title, text]) => (
+            <div className="promise" key={title}><i>{icon}</i><span><strong>{title}</strong><small>{text}</small></span></div>
           ))}
         </div>
       </section>
 
-      <section id="products" className="section">
+      <section id="collections" className="compact-section categories-section">
         <div className="shell">
-          <div className="section-head">
-            <SectionMark />
-            <p className="eyebrow green">من واجهة الحمداني</p>
-            <h2>مختارات الحمداني</h2>
-            <p>قطع مختارة بعناية، تليق بضيافتكم اليومية وأجمل مناسباتكم.</p>
-          </div>
-          {productSections.map((section) => (
-            <div className="product-group" key={section.key}>
-              <h3>{section.title}</h3>
-              <div className="products-grid">
-                {productsByCategory[section.key].map((product) => (
-                  <ProductCard key={`${section.key}-${product.name}`} item={product} />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="collections" className="section cream">
-        <div className="shell">
-          <div className="section-head">
-            <SectionMark />
-            <p className="eyebrow green">أكثر من الحلوى</p>
-            <h2>من الدار المغربية</h2>
-            <p>نكهات، أدوات وطقوس تكمل تجربة الضيافة.</p>
-          </div>
+          <div className="section-title"><h2>تسوّق حسب الفئة</h2><p>اكتشف مجموعاتنا المختارة</p></div>
           <div className="category-grid">{categories.map((item) => <CategoryCard key={item.name} item={item} />)}</div>
         </div>
       </section>
 
-      <section id="story" className="section split-section">
-        <div className="shell split">
-          <img className="split-photo" src="/images/hero-kitchen.jpg" alt="مائدة طواجن مغربية بالزيتون وماء الورد وكؤوس الشاي" />
-          <div>
-            <SectionMark />
-            <h2>حكاية من الطعم الأصيل</h2>
-            <p>الحلوى عندنا ترحيب وذكرى، تفصيل صغير يجمع الأحبة حول مائدة واحدة. لذلك نختار وصفاتنا ومكوّناتنا بروح الصنعة المغربية وكرم الضيافة العربية.</p>
-            <p className="story-caption">من المغرب، إلى مجالسكم</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="gifts" className="section gift-section">
-        <div className="shell split reverse">
-          <img className="split-photo" src="/images/category-ramadan.jpg" alt="مائدة إفطار رمضانية مغربية بالتمور والشاي" />
-          <div>
-            <SectionMark light />
-            <p className="eyebrow gold">صُنعت للإهداء</p>
-            <h2>هدايا لكل مناسبة</h2>
-            <p>تشكيلات أنيقة لرمضان والعيد، للّمة العائلية، ولهدايا الشركات. نساعدكم في اختيار ما يليق بالمناسبة وتنسيقه بعناية.</p>
-            <div className="pill-row">{giftTags.map((tag) => <span className="pill" key={tag}>{tag}</span>)}</div>
-            <a className="text-link light" href={whatsappHref}>اطلب تنسيق هديتك ←</a>
-          </div>
-        </div>
-      </section>
-
-      <section className="section cream">
+      <section id="products" className="compact-section featured-section">
         <div className="shell">
-          <div className="section-head">
-            <SectionMark />
-            <p className="eyebrow green">قالوا عنّا</p>
-            <h2>ثقة نتشرّف بها</h2>
-          </div>
-          <div className="testimonial-grid">
-            {testimonials.map((t) => (
-              <figure className="testimonial-card" key={t.name}>
-                <blockquote>“{t.text}”</blockquote>
-                <figcaption><strong>{t.name}</strong><span>{t.location}</span></figcaption>
-              </figure>
-            ))}
+          <div className="section-title"><h2>مختارات الحمداني</h2><p>حلويات مغربية أصيلة</p></div>
+          <a href="#collections" className="all-link">عرض جميع المنتجات ←</a>
+          <div className="featured-layout">
+            <div className="flourish"><span>مذاق المغرب</span><strong>يصل إلى باب منزلك</strong><b>❈</b></div>
+            <div className="products-grid">{featured.map((item) => <ProductCard key={item.name} item={item} />)}</div>
           </div>
         </div>
       </section>
 
-      <section id="contact" className="contact-band">
-        <div className="shell contact-band-row">
-          <div>
-            <p className="eyebrow gold">نكهتكم المفضّلة أقرب</p>
-            <h2>اطلب حلوياتك المفضلة اليوم</h2>
-            <p>أرسل لنا طلبك، وسنساعدك في اختيار الكمية والتشكيلة المناسبة.</p>
-          </div>
-          <a className="btn btn-gold" href={whatsappHref}>تواصل عبر واتساب ←</a>
-        </div>
+      <section id="story" className="hospitality">
+        <div className="hospitality-image" />
+        <div className="hospitality-copy"><h2>أصالة الضيافة المغربية<br />في كل مناسبة</h2><a href="#collections">اكتشف المزيد ←</a></div>
       </section>
+
+      <section className="why-section">
+        <div className="why-content">
+          <h2>لماذا الحمداني؟</h2>
+          <div className="why-grid">
+            {promises.slice(0, 4).map(([icon, title], i) => <div key={title}><i>{icon}</i><strong>{i === 0 ? 'توصيل سريع' : i === 1 ? 'مذاق أصيل' : i === 2 ? 'تجربة تسوق سهلة' : 'منتجات مختارة بعناية'}</strong><small>{i === 0 ? 'في دبي والشارقة' : i === 1 ? 'من قلب المغرب' : i === 2 ? 'عبر واتساب' : 'من أفضل الموردين'}</small></div>)}
+          </div>
+        </div>
+        <div className="morocco-card"><span>من المغرب<br />إلى دبي</span><small>أكثر من مجرد منتجات<br />... هي قطعة ذاكرة وجودة</small></div>
+      </section>
+
+      <section className="testimonials">
+        <h2>آراء عملائنا</h2>
+        <div className="shell testimonial-grid">{testimonials.map(t => <figure key={t.name}><div>★★★★★</div><blockquote>“{t.text}”</blockquote><figcaption>{t.name} - {t.location}</figcaption></figure>)}</div>
+      </section>
+
+      <section id="contact" className="newsletter"><div className="shell newsletter-inner"><div><h3>اشترك في نشرتنا الإخبارية</h3><p>احصل على آخر العروض والمنتجات الجديدة</p></div><form><input aria-label="بريدك الإلكتروني" placeholder="بريدك الإلكتروني" type="email" /><button>اشترك</button></form></div></section>
 
       <footer>
         <div className="shell footer-grid">
-          <div className="footer-brand">
-            <Logo />
-            <p>حلويات مغربية أصيلة، تُقدّم بكرم في قلب دبي.</p>
-          </div>
-          <div className="footer-col">
-            <h4>تواصل معنا</h4>
-            <a href={whatsappHref}>واتساب</a>
-            <a href={whatsappHref}>الهاتف · عبر واتساب</a>
-            <a href="#" target="_blank" rel="noreferrer">إنستغرام</a>
-          </div>
-          <div className="footer-col">
-            <h4>زورونا</h4>
-            <span className="footer-text">دبي، الإمارات العربية المتحدة</span>
-            <span className="footer-text">ساعات العمل · تُحدّث عبر واتساب</span>
-          </div>
-          <div className="footer-col">
-            <h4>روابط سريعة</h4>
-            <a href="#products">مختاراتنا</a>
-            <a href="#story">حكايتنا</a>
-            <a href="#gifts">الهدايا والمناسبات</a>
-          </div>
+          <div className="footer-brand"><Logo /><p>منتجات مغربية أصيلة في دبي</p><div className="social">◎　f　♪</div></div>
+          <div><h4>روابط سريعة</h4><a href="#">الرئيسية</a><a href="#products">منتجاتنا</a><a href="#story">من نحن</a><a href="#contact">تواصل معنا</a></div>
+          <div><h4>مجموعاتنا</h4>{categories.slice(0,5).map(c => <a key={c.name} href={c.href}>{c.name}</a>)}</div>
+          <div><h4>تواصل معنا</h4><a className="footer-whatsapp" href={whatsappHref}>◌ اطلب الآن عبر واتساب</a><p>دبي، الإمارات العربية المتحدة</p><p>info@alhamdani.ae</p></div>
+          <div className="footer-motto">أصالة مغربية<br />في قلب دبي</div>
         </div>
-        <div className="shell footer-bottom">© {new Date().getFullYear()} الحمداني للحلويات · Al Hamdani Sweets</div>
+        <div className="footer-bottom"><span>من المغرب ... إلى دبي</span><small>© 2026 Al Hamdani. All rights reserved.</small></div>
       </footer>
       <a className="mobile-whatsapp" href={whatsappHref}>اطلب عبر واتساب</a>
     </main>

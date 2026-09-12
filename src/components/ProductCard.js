@@ -6,11 +6,8 @@ export default function ProductCard({ item }) {
       </div>
       <div className="product-copy">
         <h3>{item.name}</h3>
-        <p>{item.desc}</p>
-        <div className="product-foot">
-          <strong className="product-price">{item.price}</strong>
-          <a className="text-link" href="#contact">اطلب ←</a>
-        </div>
+        <strong className="product-price">{item.price}</strong>
+        <div className="product-actions"><button aria-label="أضف إلى السلة">🛒</button><a href="#contact">اطلب عبر واتساب　◌</a></div>
       </div>
     </article>
   );

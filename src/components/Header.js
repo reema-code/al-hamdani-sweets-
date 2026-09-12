@@ -1,10 +1,10 @@
 import Logo from './Logo';
 
 const links = [
-  { label: 'مختاراتنا', href: '#products' },
-  { label: 'حكايتنا', href: '#story' },
-  { label: 'الهدايا', href: '#gifts' },
-  { label: 'المجموعات', href: '#collections' },
+  { label: 'الرئيسية', href: '#' },
+  { label: 'منتجاتنا', href: '#collections' },
+  { label: 'من المغرب إلى دبي', href: '#story' },
+  { label: 'من نحن', href: '#story' },
   { label: 'تواصل معنا', href: '#contact' }
 ];
 
@@ -18,7 +18,7 @@ export default function Header({ whatsappHref }) {
             <a key={link.label} href={link.href}>{link.label}</a>
           ))}
         </nav>
-        <a className="nav-cta" href={whatsappHref} target="_blank" rel="noreferrer">اطلب الآن ←</a>
+        <div className="header-actions"><button className="search" aria-label="بحث">⌕</button><a className="nav-cta" href={whatsappHref}>◌ اطلب عبر واتساب</a><span className="language">EN</span><button className="menu" aria-label="فتح القائمة">☰</button></div>
       </div>
     </header>
   );
