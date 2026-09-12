@@ -3,7 +3,7 @@ import Logo from '../components/Logo';
 import SectionMark from '../components/SectionMark';
 import ProductCard from '../components/ProductCard';
 import CategoryCard from '../components/CategoryCard';
-import { products } from '../data/products';
+import { productLibrary, productsByCategory } from '../data/products';
 import { categories } from '../data/categories';
 import { testimonials } from '../data/testimonials';
 
@@ -17,6 +17,15 @@ const trustItems = [
 ];
 
 const giftTags = ['رمضان والعيد', 'المناسبات العائلية', 'هدايا الشركات'];
+
+const productSections = [
+  { key: 'sweets', title: 'حلوياتكم المغربية المفضّلة، جاهزة عند الحمداني' },
+  { key: 'pantry', title: 'نكهات المطبخ المغربي الأصيلة، تجدونها عند الحمداني' },
+  { key: 'tea', title: 'كل ما يلزم جلسة أتاي مغربية، عند الحمداني' },
+  { key: 'kitchen', title: 'طاجينكم اللذيذ يبدأ من أدواته، عند الحمداني' },
+  { key: 'home', title: 'لمسة مغربية أصيلة لمنزلكم، من الحمداني' },
+  { key: 'ramadan', title: 'مائدة رمضان جاهزة بكل تفاصيلها عند الحمداني' }
+];
 
 export default function HomePage() {
   return (
@@ -57,7 +66,16 @@ export default function HomePage() {
             <h2>مختارات الحمداني</h2>
             <p>قطع مختارة بعناية، تليق بضيافتكم اليومية وأجمل مناسباتكم.</p>
           </div>
-          <div className="products-grid">{products.map((item) => <ProductCard key={item.name} item={item} />)}</div>
+          {productSections.map((section) => (
+            <div className="product-group" key={section.key}>
+              <h3>{section.title}</h3>
+              <div className="products-grid">
+                {productsByCategory[section.key].map((productKey, i) => (
+                  <ProductCard key={`${section.key}-${productKey}-${i}`} item={productLibrary[productKey]} />
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -71,10 +89,6 @@ export default function HomePage() {
           </div>
           <div className="category-grid">{categories.map((item) => <CategoryCard key={item.name} item={item} />)}</div>
         </div>
-      </section>
-
-      <section className="heritage-strip" style={{ backgroundImage: "url('/images/category-kitchen.jpg')" }}>
-        <span>أصالة تتوارثها الأجيال</span>
       </section>
 
       <section id="story" className="section split-section">
