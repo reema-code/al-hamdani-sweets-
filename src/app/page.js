@@ -23,22 +23,18 @@ export default function HomePage() {
     <main>
       <Header whatsappHref={whatsappHref} />
 
-      <section className="hero">
-        <div className="shell hero-grid">
-          <div className="hero-copy">
-            <p className="eyebrow">صناعة مغربية · ضيافة إماراتية</p>
-            <h1>حلويات تُحضّر بحب، وتُقدّم بكرم.</h1>
-            <p className="lead">مذاقات مغربية أصيلة، مختارة لترافق أجمل لمّاتكم ومناسباتكم في دبي.</p>
-            <div className="actions">
-              <a className="btn btn-orange" href={whatsappHref}>اطلب عبر واتساب</a>
-              <a className="btn btn-light" href="#products">اكتشف مختاراتنا</a>
-            </div>
-          </div>
-          <div className="hero-photos hero-photos-single">
-            <img className="hero-photo hero-photo-main" src="/images/category-sweets.jpg" alt="طبق من الشباكية والغريبة والسلو مع أدوات الشاي المغربي" />
-            <span className="hero-caption">A tradition worth sharing</span>
+      <section className="hero" style={{ backgroundImage: "url('/images/category-sweets.jpg')" }}>
+        <div className="hero-tint" />
+        <div className="shell hero-content">
+          <p className="eyebrow">صناعة مغربية · ضيافة إماراتية</p>
+          <h1>حلويات تُحضّر بحب، وتُقدّم بكرم.</h1>
+          <p className="lead">مذاقات مغربية أصيلة، مختارة لترافق أجمل لمّاتكم ومناسباتكم في دبي.</p>
+          <div className="actions">
+            <a className="btn btn-orange" href={whatsappHref}>اطلب عبر واتساب</a>
+            <a className="btn btn-outline" href="#products">اكتشف مختاراتنا</a>
           </div>
         </div>
+        <span className="hero-caption">A tradition worth sharing</span>
       </section>
 
       <section className="trust-strip">
@@ -53,18 +49,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="collections" className="section cream">
-        <div className="shell">
-          <div className="section-head">
-            <SectionMark />
-            <p className="eyebrow green">أكثر من الحلوى</p>
-            <h2>من الدار المغربية</h2>
-            <p>نكهات، أدوات وطقوس تكمل تجربة الضيافة.</p>
-          </div>
-          <div className="category-grid">{categories.map((item) => <CategoryCard key={item.name} item={item} />)}</div>
-        </div>
-      </section>
-
       <section id="products" className="section">
         <div className="shell">
           <div className="section-head">
@@ -74,6 +58,18 @@ export default function HomePage() {
             <p>قطع مختارة بعناية، تليق بضيافتكم اليومية وأجمل مناسباتكم.</p>
           </div>
           <div className="products-grid">{products.map((item) => <ProductCard key={item.name} item={item} />)}</div>
+        </div>
+      </section>
+
+      <section id="collections" className="section cream">
+        <div className="shell">
+          <div className="section-head">
+            <SectionMark />
+            <p className="eyebrow green">أكثر من الحلوى</p>
+            <h2>من الدار المغربية</h2>
+            <p>نكهات، أدوات وطقوس تكمل تجربة الضيافة.</p>
+          </div>
+          <div className="category-grid">{categories.map((item) => <CategoryCard key={item.name} item={item} />)}</div>
         </div>
       </section>
 
