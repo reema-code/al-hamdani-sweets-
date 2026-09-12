@@ -3,7 +3,7 @@ import Logo from '../components/Logo';
 import SectionMark from '../components/SectionMark';
 import ProductCard from '../components/ProductCard';
 import CategoryCard from '../components/CategoryCard';
-import { productLibrary, productsByCategory } from '../data/products';
+import { productsByCategory } from '../data/products';
 import { categories } from '../data/categories';
 import { testimonials } from '../data/testimonials';
 
@@ -70,8 +70,8 @@ export default function HomePage() {
             <div className="product-group" key={section.key}>
               <h3>{section.title}</h3>
               <div className="products-grid">
-                {productsByCategory[section.key].map((productKey, i) => (
-                  <ProductCard key={`${section.key}-${productKey}-${i}`} item={productLibrary[productKey]} />
+                {productsByCategory[section.key].map((product) => (
+                  <ProductCard key={`${section.key}-${product.name}`} item={product} />
                 ))}
               </div>
             </div>
